@@ -5,7 +5,9 @@
 
 <div class="app">
 	<header>
-		<img src={githubIcon} alt="github icon" />
+		<a href="">
+			<img src={githubIcon} alt="github icon" />
+		</a>
 	</header>
 	<main>
 		<slot />

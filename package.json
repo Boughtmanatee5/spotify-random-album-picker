@@ -36,6 +36,7 @@
 		"node": "20.17.0"
 	},
 	"dependencies": {
-		"@spotify/web-api-ts-sdk": "^1.2.0"
+		"@spotify/web-api-ts-sdk": "^1.2.0",
+		"@sveltejs/adapter-static": "^3.0.5"
 	}
 }
