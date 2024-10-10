@@ -8,7 +8,6 @@
     let backgroundImage = '';
     let error: Error | null = null;
     let loading = true;
-    console.log('artist', artist);
     const { subscribe, refresh } = useGetAlbumsForArtists(artist.id);
     subscribe((v) => {
         switch (v.status) {

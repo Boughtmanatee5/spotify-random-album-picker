@@ -15,18 +15,11 @@ export class SpotifyApiWrapper {
     }
 
     async authenticate() {
-        const authResponse = await this.spotifyApi.authenticate()
-        console.log('authResponse', authResponse);
-    }
-
-    async getAccessToken() {
-        const accessToken = await this.spotifyApi.getAccessToken();
-        console.log('accessToken', accessToken);
+        await this.spotifyApi.authenticate()
     }
 
     async isAuthenticated() {
         const accessToken = await this.spotifyApi.getAccessToken();
-        console.log('accessToken', accessToken);
         return accessToken !== null;
     }
 
