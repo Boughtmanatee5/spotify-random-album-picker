@@ -37,6 +37,7 @@
 	},
 	"dependencies": {
 		"@spotify/web-api-ts-sdk": "^1.2.0",
-		"@sveltejs/adapter-static": "^3.0.5"
+		"@sveltejs/adapter-static": "^3.0.5",
+		"vite-plugin-require": "^1.2.14"
 	}
 }
