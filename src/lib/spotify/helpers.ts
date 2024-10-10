@@ -1,6 +1,6 @@
 import { SpotifyApi, type MaxInt } from '@spotify/web-api-ts-sdk';
 
-const requiredScopes = ['user-read-private', 'user-read-email', 'user-follow-read'];
+const requiredScopes = ['user-follow-read'];
 import { PUBLIC_SPOTIFY_API_CLIENT_ID } from '$env/static/public';
 
 export function createSpotifyApi() {
