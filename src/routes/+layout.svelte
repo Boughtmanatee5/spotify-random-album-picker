@@ -5,7 +5,7 @@
 
 <div class="app">
 	<header>
-		<a href="">
+		<a href="https://github.com/Boughtmanatee5/spotify-random-album-picker">
 			<img src={githubIcon} alt="github icon" />
 		</a>
 	</header>
