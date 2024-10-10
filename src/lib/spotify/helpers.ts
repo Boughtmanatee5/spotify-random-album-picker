@@ -4,7 +4,7 @@ const requiredScopes = ['user-read-private', 'user-read-email', 'user-follow-rea
 import { PUBLIC_SPOTIFY_API_CLIENT_ID } from '$env/static/public';
 
 export function createSpotifyApi() {
-    const redirectUri = 'http://localhost:5173/';
+    const redirectUri = 'http://www.boughtmanatee.com/spotify-random-album-picker/';
     return new SpotifyApiWrapper(SpotifyApi.withUserAuthorization(PUBLIC_SPOTIFY_API_CLIENT_ID, redirectUri, requiredScopes));
 }
 
