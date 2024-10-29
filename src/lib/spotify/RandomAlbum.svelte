@@ -31,8 +31,15 @@
         }
     })
 
+    let imageLoaded = false;
+
+    const onLoad = () => {
+        imageLoaded = true;
+    }
+
     $: {
         refresh(artist.id);
+        imageLoaded = false;
     }
 </script>
 <div>
@@ -41,7 +48,7 @@
     {/if}
     {#if album}
         <div class="album-image">
-            <img src={backgroundImage} alt={album.name} />
+            <img class={imageLoaded ? 'loaded' : ''} src={backgroundImage} alt={album.name} on:load={onLoad} />
         </div>
         <h3>
             <a href={album.external_urls.spotify}>
@@ -57,12 +64,12 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        height: 640px;
+        width: 640px;
     }
     .album-image {
         position: relative;
-        height: 640px;
-        width: 640px;
-        background: radial-gradient(circle, rgba(30,215,96,1) 10%, rgba(0,0,0,1) 90%);;
+        height: 100%;
     }
     .album-image img {
         position: absolute;
@@ -70,5 +77,11 @@
         left: 0;
         width: 100%;
         height: 100%;
+        opacity: 0;
+        transition: opacity 250ms ease-in-out;
+
+        &.loaded {
+            opacity: 1;
+        }
     }
 </style>
